@@ -16,5 +16,13 @@ for (let i = 0; i <= 15; i++) {
 
         column.appendChild(box);
     }
+
     gridContainer.appendChild(column);
 }
+
+
+gridContainer.addEventListener('mouseover', (event) => {
+    if (event.target.tagName === 'DIV' && event.target !== gridContainer) {
+        event.target.style.backgroundColor = '#f4f4f4';
+    }
+});
