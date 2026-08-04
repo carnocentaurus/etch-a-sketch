@@ -8,11 +8,11 @@ for (let i = 0; i <= 15; i++) {
     column.style.gap = '0.2rem';
 
     for (let i = 0; i <= 15; i++) {
-        const box = document.createElement('div');
+        const box = document.createElement('section');
 
         box.style.width = '20px';
         box.style.height = '20px';
-        box.style.backgroundColor = '#333';
+        box.style.backgroundColor = '#353839';
 
         column.appendChild(box);
     }
@@ -22,7 +22,10 @@ for (let i = 0; i <= 15; i++) {
 
 
 gridContainer.addEventListener('mouseover', (event) => {
-    if (event.target.tagName === 'DIV' && event.target !== gridContainer) {
-        event.target.style.backgroundColor = '#f4f4f4';
+    if (event.target.tagName === 'SECTION' && 
+        event.target !== gridContainer && 
+        event.target !== 'DIV'
+    ) {
+        event.target.style.backgroundColor = '#808080';
     }
 });
