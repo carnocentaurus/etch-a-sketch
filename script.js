@@ -1,6 +1,6 @@
 const gridContainer = document.querySelector('#grid-container');
 
-const boxes = 100;
+const boxes = 1;
 
 
 for (let i = 1; i <= boxes; i++) {
@@ -16,7 +16,7 @@ for (let i = 1; i <= boxes; i++) {
         box.style.display = 'flex';
         box.style.flexGrow = '1;'
         box.style.width = 'auto';
-        box.style.height = 'calc(600px / 20)';
+        box.style.height = 'calc(600px / 1)';
         box.style.backgroundColor = '#353839';
 
         column.appendChild(box);
