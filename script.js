@@ -1,29 +1,48 @@
+const boxesPerSide = document.querySelector('#boxes-per-side');
+const generateGrid = document.querySelector('#generate-grid');
 const gridContainer = document.querySelector('#grid-container');
 
-const boxes = 1;
 
+generateGrid.addEventListener('click', () => {
+    gridContainer.innerHTML = '';
 
-for (let i = 1; i <= boxes; i++) {
-    const column = document.createElement('div');
-    column.style.display = 'flex';
-    column.style.flexDirection = 'column';
-    column.style.flexGrow = '1';
-    column.style.gap = '1px';
+    const boxes = parseInt(boxesPerSide.value);
 
-    for (let i = 1; i <= boxes; i++) {
-        const box = document.createElement('section');
-
-        box.style.display = 'flex';
-        box.style.flexGrow = '1;'
-        box.style.width = 'auto';
-        box.style.height = 'calc(600px / 1)';
-        box.style.backgroundColor = '#353839';
-
-        column.appendChild(box);
+    if (isNaN(boxes)) {
+        alert('Values must be a number.');
+        return;
+    }
+    if (boxes < 1) {
+        alert('Number of boxes per side can not be lower than 1.');
+        return;
+    }
+    if (boxes > 100) {
+        alert('Number of boxes per side can not be greater than 100.');
+        return;
     }
 
-    gridContainer.appendChild(column);
-}
+    for (let i = 1; i <= boxes; i++) {
+        const column = document.createElement('div');
+        column.style.display = 'flex';
+        column.style.flexDirection = 'column';
+        column.style.flexGrow = '1';
+        column.style.gap = '1px';
+
+        for (let i = 1; i <= boxes; i++) {
+            const box = document.createElement('section');
+
+            box.style.display = 'flex';
+            box.style.flexGrow = '1;'
+            box.style.width = 'auto';
+            box.style.height = 'calc(600px / 1)';
+            box.style.backgroundColor = '#353839';
+
+            column.appendChild(box);
+        }
+
+        gridContainer.appendChild(column);
+    }
+});
 
 
 gridContainer.addEventListener('mouseover', (event) => {
