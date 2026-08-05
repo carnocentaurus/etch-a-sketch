@@ -9,7 +9,7 @@ generateGrid.addEventListener('click', () => {
     const boxes = parseInt(boxesPerSide.value);
 
     if (isNaN(boxes)) {
-        alert('Values must be a number.');
+        alert('Enter a value.');
         return;
     }
     if (boxes < 1) {
