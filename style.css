@@ -5,13 +5,18 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #dbe2e9;
+    height: 100vh;
 }
 
 #grid-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
-    height: 100vh;
+    justify-content: space-between;
+    gap: 1px;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
 }
