@@ -1,23 +1,25 @@
 const boxesPerSide = document.querySelector('#boxes-per-side');
 const generateGrid = document.querySelector('#generate-grid');
 const gridContainer = document.querySelector('#grid-container');
+const errorMessage = document.querySelector('#error-message');
 
 
 generateGrid.addEventListener('click', () => {
     gridContainer.innerHTML = '';
+    errorMessage.textContent = '';
 
     const boxes = parseInt(boxesPerSide.value);
 
     if (isNaN(boxes)) {
-        alert('Enter a value.');
+        errorMessage.textContent = 'Enter a value';
         return;
     }
     if (boxes < 1) {
-        alert('Number of boxes per side can not be lower than 1.');
+        errorMessage.textContent = 'Number of boxes per side can not be lower than 1';
         return;
     }
     if (boxes > 100) {
-        alert('Number of boxes per side can not be greater than 100.');
+        errorMessage.textContent = 'Number of boxes per side can not be greater than 100';
         return;
     }
 

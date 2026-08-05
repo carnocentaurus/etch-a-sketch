@@ -4,6 +4,7 @@
 }
 
 * {
+    font-family: 'Roboto';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,14 +25,12 @@ body {
 }
 
 .title {
-    font-family: 'Roboto';
     font-size: 2rem;
     font-weight: bold;
     color: #353839;
 }
 
 #boxes-per-side {
-    font-family: 'Roboto';
     width: 50%;
     background-color: transparent;
     border: none;
@@ -40,7 +39,6 @@ body {
 }
 
 #generate-grid {
-    font-family: 'Roboto';
     width: 45%;
     color: #fafafa;
     background-color: #353839;
@@ -51,6 +49,11 @@ body {
 
 #generate-grid:hover {
     opacity: 80%;
+}
+
+#error-message {
+    color: #a91b0d;
+    margin-top: 20px;
 }
 
 #grid-container {
