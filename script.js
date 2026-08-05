@@ -51,7 +51,12 @@ gridContainer.addEventListener('mouseover', (event) => {
     if (event.target.tagName === 'SECTION' && 
         event.target !== gridContainer && 
         event.target !== 'DIV'
-    ) {
-        event.target.style.backgroundColor = '#808080';
+    ) 
+    {
+        const max = 255;
+        const min = 0;
+
+        const random = Math.floor(Math.random() * (max - min + 1)) + min;
+        event.target.style.backgroundColor = `rgb(${random} ${random} ${random})`;
     }
 });
